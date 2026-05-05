@@ -1,0 +1,112 @@
+:root{
+  --orange:#F47A1F;
+  --orange-dark:#D9651A;
+  --gray:#6E6E6E;
+  --gray-light:#E8E8E8;
+  --gray-mid:#9E9E9E;
+  --bg:#F5F5F5;
+  --white:#FFFFFF;
+  --red:#D32F2F;
+  --green:#388E3C;
+  --yellow:#FBC02D;
+  --shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Segoe UI',Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:#333;
+  min-height:100vh;
+}
+
+/* Header with logo and title - present on every page */
+.app-header{
+  background:var(--white);
+  border-bottom:3px solid var(--orange);
+  padding:12px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:var(--shadow);
+  position:sticky;top:0;z-index:100;
+}
+.brand{display:flex;align-items:center;gap:14px;}
+.logo-img{height:46px;width:auto;display:block;}
+.brand-tagline{
+  font-size:11px;color:var(--gray);
+  margin-top:2px;letter-spacing:0.4px;
+  text-transform:uppercase;font-weight:600;
+}
+.brand-tagline .accent{color:var(--orange);}
+.brand-text{display:flex;flex-direction:column;}
+.login-logo{
+  display:block;margin:0 auto 10px;
+  max-width:320px;width:100%;height:auto;
+}
+.login-tagline{
+  text-align:center;color:var(--gray);
+  font-size:13px;letter-spacing:0.5px;
+  text-transform:uppercase;margin-bottom:4px;font-weight:600;
+}
+.login-company{
+  text-align:center;color:var(--orange);
+  font-size:13px;letter-spacing:0.5px;
+  text-transform:uppercase;font-weight:700;margin-bottom:24px;
+}
+.app-title{
+  font-size:22px;
+  font-weight:700;
+  color:var(--gray);
+  letter-spacing:0.5px;
+}
+.app-title .accent{color:var(--orange);}
+.user-badge{
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;color:var(--gray);
+}
+.user-badge strong{color:#333;}
+
+/* Container */
+.container{max-width:1200px;margin:0 auto;padding:24px;}
+
+/* Login screen */
+.login-wrap{
+  min-height:calc(100vh - 80px);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.login-box{
+  background:var(--white);
+  padding:40px;border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  width:100%;max-width:420px;
+}
+.login-box h2{
+  color:var(--gray);
+  margin-bottom:8px;font-size:24px;
+}
+.login-box .subtitle{
+  color:var(--gray-mid);
+  margin-bottom:24px;font-size:14px;
+}
+.form-group{margin-bottom:18px;}
+.form-group label{
+  display:block;font-weight:600;
+  margin-bottom:6px;color:#444;font-size:14px;
+}
+.form-group select,
+.form-group input,
+.form-group textarea{
+  width:100%;padding:12px;
+  border:2px solid var(--gray-light);
+  border-radius:8px;font-size:15px;
+  font-family:inherit;
+  transition:border-color 0.2s;
+  background:var(--white);
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;border-color:var(--orange);
+}
+

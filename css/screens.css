@@ -1,0 +1,58 @@
+/* Filter row */
+.filter-row{
+  display:flex;gap:12px;align-items:center;
+  flex-wrap:wrap;margin-bottom:16px;
+}
+.filter-row label{
+  font-weight:600;color:var(--gray);
+}
+.filter-row select{
+  padding:8px 12px;border-radius:6px;
+  border:2px solid var(--gray-light);
+  font-family:inherit;font-size:14px;
+}
+
+/* Logout footer */
+.footer-actions{
+  display:flex;justify-content:flex-end;
+  margin-top:24px;padding-top:20px;
+  border-top:1px solid var(--gray-light);
+}
+
+/* Real-time monitor */
+.monitor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:16px;
+}
+.monitor-card{
+  background:var(--white);
+  padding:18px;border-radius:10px;
+  box-shadow:var(--shadow);
+  border-top:4px solid var(--orange);
+}
+.monitor-card.idle{border-top-color:var(--gray-mid);opacity:0.7;}
+.monitor-card.paused{border-top-color:var(--yellow);}
+.monitor-card.malfunction{border-top-color:var(--red);}
+.monitor-card h4{
+  color:var(--gray);font-size:16px;
+  margin-bottom:8px;
+}
+.monitor-card .status{
+  display:inline-block;padding:3px 10px;
+  border-radius:12px;font-size:12px;
+  font-weight:600;margin-bottom:8px;
+}
+.monitor-card .timer-mini{
+  font-family:'Courier New',monospace;
+  font-size:24px;font-weight:700;
+  color:var(--orange);margin:6px 0;
+}
+.monitor-card .info{font-size:13px;color:#555;margin:3px 0;}
+
+/* Responsive */
+@media(max-width:768px){
+  .timer-time{font-size:48px;}
+  .app-title{font-size:16px;}
+  .container{padding:14px;}
+}
